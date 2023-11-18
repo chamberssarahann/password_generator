@@ -4,32 +4,66 @@ var generateBtn = document.querySelector("#generate");
 const lowerCaseStr = "abcdefghijklmnopqrstuvwxyz";
 const upperCaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numericStr = "0123456789";
-const specialStr = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+const specialStr = "!\"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~";
 
-// function generatePassword() {
-//   let tempPassword = '';
-//   let selectionStr = '';
+  // let tempPassword = '';
+  // let selectionStr = '';
+  let generatePassword = "";
 
-//   let length = prompt('length: ');    // return string
-//   // if (passwordLength < 8 || passwordLength > 128) {
-//   //   window.prompt("Please choose a length between 8 and 128")
-//   // } 
-//   let isLower = confirm("lower");       // return true or false
-//   let isUpper = confirm("upper");       // return true or false
-//   let isNumber = confirm("number");     // return true or false
-//   let isSpecial = confirm("special");   // return true or false
-
-  let userInput = {}
-  function getUserInput() {
-    userInput.length = prompt("length");
-    userInput.lower = confirm("lower");
-    userInput.upper = confirm("upper");
-    userInput.number = confirm("number");
-    userInput.special = confirm("special");
+  let length = prompt("Please choose a password length between 8 and 128 characters");    // return string
+  if (length < 8 || length > 128) {
+    window.prompt("Invalid selection. Please choose a password length between 8 and 128 characters")
+  } 
+  let isLower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+  if (isLower === true) {
+    console.log("Lower is true")
   }
-    console.log(result)
+  else {
+    console.log("Lower is false")
+  }
+  let isUpper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+  if (isUpper === true) {
+    console.log("Upper is true")
+  }
+  else {
+    console.log("Upper is false")
+  }
+  let isNumber = confirm("Would you like to include numbers? Press 'Ok' for yes, and 'Cancel' for no");     // return true or false
+  if (isNumber === true) {
+    console.log("Number is true")
+  }
+  else {
+    console.log("Number is false")
+  }
+  let isSpecial = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel' for no");   // return true or false
+  if (isSpecial === true) {
+    console.log("Special is true")
+  }
+  else {
+    console.log("Special is false")
+  }
 
-  // function generatePassword() {
+
+
+  // let userInput = {}
+  // function getUserInput() {
+  //   userInput.length = prompt("Choose a password length between 8 and 128 characters");
+  //     if (length < 8 || length > 128) {
+  //   window.prompt("Invalid selection. Please choose a password length between 8 and 128 characters")
+  // } 
+  //   userInput.lower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel for no");
+  //   userInput.upper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel for no");
+  //   userInput.number = confirm("Would you like to include numbers as well? Press 'Ok' for yes, and 'Cancel for no");
+  //   userInput.special = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel for no");
+  // }
+  //   console.log(generatePassword)
+
+  //   function generatePassword() {
+  //     if (userInput.lower === true) {
+  //       console.log("Lowercase is true")
+  //     } 
+  //   }
+
 
   
   // selectionStr += lowerCaseStr;
