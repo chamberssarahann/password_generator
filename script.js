@@ -6,42 +6,44 @@ const upperCaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numericStr = "0123456789";
 const specialStr = "!\"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~";
 
-  // let tempPassword = '';
-  // let selectionStr = '';
-  let generatePassword = "";
+let userInput = {};
 
-  let length = prompt("Please choose a password length between 8 and 128 characters");    // return string
-  if (length < 8 || length > 128) {
-    window.prompt("Invalid selection. Please choose a password length between 8 and 128 characters")
-  } 
-  let isLower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
-  if (isLower === true) {
-    console.log("Lower is true")
+  // function retrieveUserInput(){
+    userInput.length = number(window.prompt("Please choose a password length between 8 and 128 characters"));
+      if (userInput.length < 8 || userInput.length > 128){
+        window.alert("Invalid selection. \nPlease choose a password length between 8 and 128 characters");
+        retrieveUserInput();
+        console.log(userInput.length)
+      // }
+    //  let isLower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+    //  let isUpper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+    //  let isNumber = confirm("Would you like to include numbers? Press 'Ok' for yes, and 'Cancel' for no");     // return true or false
+    //  let isSpecial = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel' for no");   // return true or false
+    //  if (!isSpecial && !isNumber && !isUpper && !isLower) {
+    // window.alert("Password must be comprised of at least one option (lowercase, uppercase, numbers, or special characters). Please restart and choose one.")
   }
-  else {
-    console.log("Lower is false")
-  }
-  let isUpper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
-  if (isUpper === true) {
-    console.log("Upper is true")
-  }
-  else {
-    console.log("Upper is false")
-  }
-  let isNumber = confirm("Would you like to include numbers? Press 'Ok' for yes, and 'Cancel' for no");     // return true or false
-  if (isNumber === true) {
-    console.log("Number is true")
-  }
-  else {
-    console.log("Number is false")
-  }
-  let isSpecial = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel' for no");   // return true or false
-  if (isSpecial === true) {
-    console.log("Special is true")
-  }
-  else {
-    console.log("Special is false")
-  }
+
+  retrieveUserInput();
+  //   let length = "";
+  // let selectionStr = '';
+  // let generatePassword = "";
+
+  // userInput.length = prompt("Please choose a password length between 8 and 128 characters");    // return string
+  // if (length < 8 || length > 128) {
+  //   window.alert("Invalid selection. \nPlease choose a password length between 8 and 128 characters")
+  //   userInput();
+  // } 
+  // let isLower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+  // let isUpper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+  // let isNumber = confirm("Would you like to include numbers? Press 'Ok' for yes, and 'Cancel' for no");     // return true or false
+  // let isSpecial = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel' for no");   // return true or false
+  // if (!isSpecial && !isNumber && !isUpper && !isLower) {
+  //   window.alert("Password must be comprised of at least one option (lowercase, uppercase, numbers, or special characters). Please restart and choose one.")
+  // }}
+  // UserInput();
+  // function tempPassword() {
+  
+  // }
 
 
 
