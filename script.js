@@ -9,7 +9,7 @@ const specialStr = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 const userOptions = [];
 
 function generatePassword() {
-  let finalPassword = "";
+  let finalPassword = [];
 
   const passwordLength = parseInt(
     window.prompt(
@@ -52,15 +52,23 @@ function generatePassword() {
       }
       console.log(userOptions)
 
+// Need to apply math.random to the userOptions * length and write my for statement. Example from Slack is:  const computerChoice = choices[Math.floor(Math.random()) * choices.length];
 
+for (var i = 0; i < passwordLength; i++) {
+  var randomIndex = Math.floor(Math.random() * userOptions.length)// returns number
+  var convertedIndex = userOptions[randomIndex] // inserts randomIndex as array search parameter ie userOptions[2] = "c"
+  finalPassword.push(convertedIndex)
+  console.log(finalPassword)
+}
 
-
-
-      return finalPassword
+      return finalPassword.join("");
     }
   }
   // window.alert("Password must be comprised of at least one option (lowercase, uppercase, numbers, or special characters). Please restart and choose one.")
 }
+// const finalPassword = tempPassword[Math.floor(Math.random()) * passwordLength];
+// console.log(finalPassword)
+// function finalPassword() {}
 
 //   let length = "";
 // let selectionStr = '';
