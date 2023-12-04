@@ -1,32 +1,33 @@
-Week 3 Challenge: Password Generator
+# Password Generator
 
 ## Description
 
-I created a password generator so that employees can meet password requirements and have secure passwords without being tempted to use an old familiar and insecure password for sensistive work applications. I learned a lot about javascript in general during this project. I'm still getting familiar with the language itself, and it's not very intuitive for me so far. Some things feel like they're written backwards, but in thinking about it as a literal new language like Spanish, that helped reassure me that I was doing things correctly. 
+I created a password generator that can give you a secure password which meets specific requirements for security (ie between 8-128 characters, and have a combination of uppercase, lowercase, special characters, and numbers). This way, hypothetical work apps are going to be more secure than if they were accesible via a re-used user password like 'Password123'.
 
 ## Installation
 
-No special steps required. Simply access the password generator via any browser which is connected to the internet.
+No installation necessary, simple access the website from any web-connected browser of your choosing. 
 
 ## Usage
 
-1. What you'll see on page load
-![Screenshot of entire page](Assets/images/page_load.png)
+To use the passwrod generator, you can use the visual cues below:
 
-2. Click 'Generate Password' button
-![Screenshot of generate password button](Assets/images/click_button.png)
+Screenshot of site
+![screenshot of site](./Assets/images/screenshot_of_generator.png)
 
-3. Make selections and follow prompts
-![Screenshot of selection](Assets/images/follow_prompts.png)
+Press the 'generate password' button and enter length
+![enter password length screenshot](./Assets/images/password_length.png)
 
-4. 
+Make selections for remainder options (uppercase, lowercase, special characters, numbers)
+![enter option selections screenshot](./Assets/images/other_selections.png)
+
+Then, you may copy your new password, and ideally, save it to your preferred password manager application for sake-keeping
+![final password to copy and store](./Assets/images/final_password.png)
 
 
 ## Credits
 
-Special thanks to Sarun Thunyapauksanon for offering to help throughout, and helping me stay on track.
-
-Also need to say thank you to three separate tutors who helped me push the userOptions into that var so that I could apply math.floor to it to get my finalPassword.
+Big thanks to Sarun, and the three tutors from AskBCS who helped me with the javascript 
 
 ## License
 
