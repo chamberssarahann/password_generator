@@ -6,13 +6,12 @@ const upperCaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numericStr = "0123456789";
 const specialStr = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-// This holds my user selections
 const userOptions = [];
 
-// This holds my user selections after they've been randomly selected according to the user's desired length
 function generatePassword() {
-  let finalPassword = [];
+  let finalPassword = "";
 
+  // Window prompts to collect selections, and validations to ensure selections meet requirements
 
   const passwordLength = parseInt(
     window.prompt(
@@ -22,8 +21,8 @@ function generatePassword() {
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert(
       "Invalid selection.\nPlease choose a password length between 8 and 128 characters"
-    ); 
-    generatePassword(); // This repeats until you select an appropriate length
+    );
+    generatePassword();
   } else {
     let isLower = confirm(
       "Would you like to include lowercase letters?\nPress 'Ok' for yes, and 'Cancel' for no"
@@ -37,9 +36,11 @@ function generatePassword() {
     let isSpecial = confirm(
       "And finally, would you like to include special characters?\nPress 'Ok' for yes, and 'Cancel' for no"
     ); // return true or false
-    if (!isSpecial && !isNumber && !isUpper && !isLower) { 
-      generatePassword(); // This repeats until you select at least 1 option
+    if (!isSpecial && !isNumber && !isUpper && !isLower) {
+      generatePassword();
     } else {
+
+    // Pushing all user selections into a variable
       
       if (isLower) {
         userOptions.push(...lowerCaseStr)
@@ -55,17 +56,61 @@ function generatePassword() {
       }
       console.log(userOptions)
 
-for (var i = 0; i < passwordLength; i++) {
-  var randomIndex = Math.floor(Math.random() * userOptions.length)// returns number
-  var convertedIndex = userOptions[randomIndex] // inserts randomIndex as array search parameter ie userOptions[2] = "c"
-  finalPassword.push(convertedIndex) // pushes the output of the array into the final password var
-  console.log(finalPassword)
-}
 
-      return finalPassword.join(""); // removes commas
+
+
+
+      return finalPassword
     }
   }
+  // window.alert("Password must be comprised of at least one option (lowercase, uppercase, numbers, or special characters). Please restart and choose one.")
 }
+
+//   let length = "";
+// let selectionStr = '';
+// let generatePassword = "";
+
+// userInput.length = prompt("Please choose a password length between 8 and 128 characters");    // return string
+// if (length < 8 || length > 128) {
+//   window.alert("Invalid selection. \nPlease choose a password length between 8 and 128 characters")
+//   userInput();
+// }
+// let isLower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+// let isUpper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel' for no");       // return true or false
+// let isNumber = confirm("Would you like to include numbers? Press 'Ok' for yes, and 'Cancel' for no");     // return true or false
+// let isSpecial = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel' for no");   // return true or false
+// if (!isSpecial && !isNumber && !isUpper && !isLower) {
+//   window.alert("Password must be comprised of at least one option (lowercase, uppercase, numbers, or special characters). Please restart and choose one.")
+// }}
+// UserInput();
+// function tempPassword() {
+
+// }
+
+// let userInput = {}
+// function getUserInput() {
+//   userInput.length = prompt("Choose a password length between 8 and 128 characters");
+//     if (length < 8 || length > 128) {
+//   window.prompt("Invalid selection. Please choose a password length between 8 and 128 characters")
+// }
+//   userInput.lower = confirm("Would you like to include lowercase letters? Press 'Ok' for yes, and 'Cancel for no");
+//   userInput.upper = confirm("Would you like to include uppercase letters? Press 'Ok' for yes, and 'Cancel for no");
+//   userInput.number = confirm("Would you like to include numbers as well? Press 'Ok' for yes, and 'Cancel for no");
+//   userInput.special = confirm("And finally, would you like to include special characters? Press 'Ok' for yes, and 'Cancel for no");
+// }
+//   console.log(generatePassword)
+
+//   function generatePassword() {
+//     if (userInput.lower === true) {
+//       console.log("Lowercase is true")
+//     }
+//   }
+
+// selectionStr += lowerCaseStr;
+
+// for (let i = 0; i < length; i++) {}
+
+// return password;
 
 // Write password to the #password input
 function writePassword() {
